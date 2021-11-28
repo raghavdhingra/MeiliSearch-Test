@@ -1,0 +1,12 @@
+#Meili Search Package json database
+meili_database/
+
+# Meili Search default indexed database
+data.ms/
+
+# React modules
+react-webapp/node_modules/
+react-webapp/build/
+
+# devserver
+node_modules/

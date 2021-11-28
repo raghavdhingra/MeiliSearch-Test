@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "meilisearch": "^0.23.0"
+  },
+  "scripts": {
+    "init_database": "node init_database.js",
+    "start": "./meilisearch --db-path ./meili_database --http-addr '127.0.0.1:7700' --master-key=a2efjndskfkdsj"
+  }
+}
