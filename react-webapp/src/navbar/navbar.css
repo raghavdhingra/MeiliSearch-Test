@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: space-between;
+  box-shadow: 0 13px 20px 0 rgb(0 0 0 / 5%);
+  align-items: center;
+}
+
+.navbar-link-wrapper {
+  display: flex;
+}
+
+.navbar-list-item {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: rgb(70, 70, 70);
+  font-size: 1.1rem;
+}
