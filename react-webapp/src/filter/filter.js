@@ -82,7 +82,7 @@ const Filter = ({
                 checked={orderValue === "asc"}
               />
               <label>
-                {filterValue === "geo" ? "Nearest shop" : "Low to High"}
+                {filterValue === "geo" ? "Near to Far" : "Low to High"}
               </label>
             </div>
             <div className='label-wrap'>
@@ -95,7 +95,7 @@ const Filter = ({
                 checked={orderValue === "desc"}
               />
               <label>
-                {filterValue === "geo" ? "Farthest shop" : "High to Low"}
+                {filterValue === "geo" ? "Far to Near" : "High to Low"}
               </label>
             </div>
           </div>

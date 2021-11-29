@@ -48,12 +48,22 @@ const ProductList = ({ searchStr = "", order = "", filter = "", location }) => {
     }).then(({ data: { hits } }) => setProductList(hits));
   }, [searchStr, order, filter, location]);
 
+  const getKms = (num) => (num / 1000).toFixed(2);
+
   return (
     <div className='product-list-cmpt'>
       {productList && productList.length > 0 ? (
         <ul className='product-list-wrapper'>
           {productList.map((product) => {
-            const { id, name, price, store_name, rating, address } = product;
+            const {
+              id,
+              name,
+              price,
+              store_name,
+              rating,
+              address,
+              _geoDistance: distance,
+            } = product;
 
             return (
               <li key={id} className='product-list-item'>
@@ -63,6 +73,9 @@ const ProductList = ({ searchStr = "", order = "", filter = "", location }) => {
                 <p>Price: ₹{price}</p>
                 <p>{store_name}</p>
                 <p>Address: {address}</p>
+                {distance && (
+                  <b className='distance-text'>{getKms(distance)}kms away</b>
+                )}
                 <p className='buy-button-wrapper'>
                   <button className='buy-button'>Buy Now</button>
                 </p>
