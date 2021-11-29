@@ -11,6 +11,7 @@ import "./dashboard.css";
 const Dashboard = () => {
   const [value, setValue] = useState("");
   const [order, setOrder] = useState("");
+  const [radius, setRadius] = useState();
   const [filter, setFilter] = useState("");
   const [location, setLocation] = useState({ latitude: 0, longitude: 0 });
 
@@ -41,12 +42,15 @@ const Dashboard = () => {
             onFilterChange={(e) => setFilter(e)}
             onClearFilter={handleClearFilter}
             setLocation={setLocation}
+            radius={radius}
+            setRadius={setRadius}
           />
           <ProductList
             searchStr={value}
             order={order}
             filter={filter}
             location={location}
+            radius={radius}
           />
         </div>
       </div>

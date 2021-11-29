@@ -9,7 +9,13 @@ import {
 
 import "./productList.css";
 
-const ProductList = ({ searchStr = "", order = "", filter = "", location }) => {
+const ProductList = ({
+  searchStr = "",
+  order = "",
+  filter = "",
+  location,
+  radius,
+}) => {
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
@@ -22,6 +28,12 @@ const ProductList = ({ searchStr = "", order = "", filter = "", location }) => {
     */
     if (filter && order) {
       if (filter === "geo") {
+        if (radius && radius > 0) {
+          apiData[
+            "filter"
+          ] = `_geoRadius(${location.latitude}, ${location.longitude}, ${radius})`;
+        }
+
         apiData["sort"] = [
           `_geoPoint(${location.latitude}, ${location.longitude}):${order}`,
         ];
@@ -46,7 +58,7 @@ const ProductList = ({ searchStr = "", order = "", filter = "", location }) => {
         ...apiData,
       },
     }).then(({ data: { hits } }) => setProductList(hits));
-  }, [searchStr, order, filter, location]);
+  }, [searchStr, order, filter, location, radius]);
 
   const getKms = (num) => (num / 1000).toFixed(2);
 

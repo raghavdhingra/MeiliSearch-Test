@@ -9,8 +9,12 @@ const Filter = ({
   onFilterChange,
   onClearFilter,
   setLocation,
+  radius,
+  setRadius,
 }) => {
-  if (filterValue === "geo" && navigator && navigator.geolocation) {
+  const isGeoFiltered = filterValue === "geo";
+
+  if (isGeoFiltered && navigator && navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       setLocation({
         latitude: position.coords.latitude,
@@ -63,10 +67,20 @@ const Filter = ({
             className='input-radio'
             value='geo'
             onChange={(e) => onFilterChange(e.target.value)}
-            checked={filterValue === "geo"}
+            checked={isGeoFiltered}
           />
           <label>Location</label>
         </div>
+        {isGeoFiltered && (
+          <div className='label-wrap'>
+            <input
+              value={radius}
+              type='number'
+              placeholder='Enter radius to filter'
+              onChange={(e) => setRadius(e.target.value)}
+            />
+          </div>
+        )}
       </div>
       {filterValue && (
         <>
@@ -81,9 +95,7 @@ const Filter = ({
                 onChange={(e) => onOrderChange(e.target.value)}
                 checked={orderValue === "asc"}
               />
-              <label>
-                {filterValue === "geo" ? "Near to Far" : "Low to High"}
-              </label>
+              <label>{isGeoFiltered ? "Near to Far" : "Low to High"}</label>
             </div>
             <div className='label-wrap'>
               <input
@@ -94,9 +106,7 @@ const Filter = ({
                 onChange={(e) => onOrderChange(e.target.value)}
                 checked={orderValue === "desc"}
               />
-              <label>
-                {filterValue === "geo" ? "Far to Near" : "High to Low"}
-              </label>
+              <label>{isGeoFiltered ? "Far to Near" : "High to Low"}</label>
             </div>
           </div>
           <button onClick={onClearFilter} className='clear-filter-button'>
