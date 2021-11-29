@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -32,6 +33,12 @@ body {
 }
 
 .product-section {
-  display: flex;
-  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-section {
+    display: flex;
+    gap: 1rem;
+  }
 }
