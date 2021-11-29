@@ -1,3 +1,37 @@
 .filter-cmpt {
   padding: 1rem;
+  min-width: 200px;
+}
+
+.sort-wrapper {
+  margin-top: 1rem;
+}
+
+.label-wrap {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-radio {
+  cursor: pointer;
+}
+
+.clear-filter-button {
+  padding: 0.4rem 0.6rem;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px 0 #0004;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+.clear-filter-button:active {
+  transform: scale(0.95);
 }
