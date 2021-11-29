@@ -47,6 +47,13 @@ https://raw.githubusercontent.com/raghavdhingra/ItemApi/main/item.json
 
 Link to Repository: https://github.com/raghavdhingra/ItemApi
 
+#### Screenshot of the working application
+
+<img width="1440" alt="Screenshot 2021-11-29 at 11 09 52 PM" src="https://user-images.githubusercontent.com/24492201/143916583-de73e3ff-8ecc-4444-8669-6981b43d589b.png">
+<img width="371" alt="Screenshot 2021-11-29 at 11 10 04 PM" src="https://user-images.githubusercontent.com/24492201/143916626-00878c52-0647-4628-844f-2dde2658861e.png">
+<img width="363" alt="Screenshot 2021-11-29 at 11 10 18 PM" src="https://user-images.githubusercontent.com/24492201/143916634-c457ff4a-012d-4011-bd5c-7434be1dc2e1.png">
+
+
 ### References
 
 https://docs.meilisearch.com/learn/getting_started/installation.html#download-and-launch
