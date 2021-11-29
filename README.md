@@ -54,7 +54,12 @@ It's a responsive application to test MeiliSearch database and API along with so
 <img width="1440" alt="Screenshot 2021-11-29 at 11 09 52 PM" src="https://user-images.githubusercontent.com/24492201/143916583-de73e3ff-8ecc-4444-8669-6981b43d589b.png">
 <img width="1440" alt="Screenshot 2021-11-29 at 11 12 35 PM" src="https://user-images.githubusercontent.com/24492201/143917232-8633f86e-33bc-4a88-8743-61ea07577878.png">
 <img width="1440" alt="Screenshot 2021-11-29 at 11 14 22 PM" src="https://user-images.githubusercontent.com/24492201/143917258-ddfb3558-f552-40ee-95d0-ccc42f283835.png">
-<img width="1440" alt="Screenshot 2021-11-29 at 11 14 37 PM" src="https://user-images.githubusercontent.com/24492201/143917265-71b2111b-594f-4ed2-b184-75f604815183.png">
+
+##### If location filter is selected, it will ask for current location, below the screen the longitude and latitude will be visible. If no radius value is given, then it will sort all value, else it will consider the radius, and filter the list based on given radius in meters.
+
+<img width="1440" alt="Screenshot 2021-11-29 at 11 25 19 PM" src="https://user-images.githubusercontent.com/24492201/143918987-f1d85fbc-a107-40ec-b445-b23516775ef4.png">
+<img width="1440" alt="Screenshot 2021-11-29 at 11 25 36 PM" src="https://user-images.githubusercontent.com/24492201/143919025-c7c7a392-1894-4964-93ed-1789593c8940.png">
+
 <img width="371" alt="Screenshot 2021-11-29 at 11 10 04 PM" src="https://user-images.githubusercontent.com/24492201/143916626-00878c52-0647-4628-844f-2dde2658861e.png">
 <img width="363" alt="Screenshot 2021-11-29 at 11 10 18 PM" src="https://user-images.githubusercontent.com/24492201/143916634-c457ff4a-012d-4011-bd5c-7434be1dc2e1.png">
 
