@@ -59,8 +59,8 @@ const init_database_entry = async () => {
     await index.addDocuments(product);
     await index.updateSettings(newSettings);
 
-    await index.updateSortableAttributes(["name", "price", "rating"]);
-    await index.updateFilterableAttributes(["name", "price", "rating"]);
+    await index.updateSortableAttributes(["name", "price", "rating", "_geo"]);
+    await index.updateFilterableAttributes(["name", "price", "rating", "_geo"]);
 
     console.log("Products added to the MeiliSearch Database");
   } catch (e) {

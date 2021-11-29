@@ -1,5 +1,4 @@
 import React from "react";
-import Input from "../input/input";
 
 import "./bottomBar.css";
 
