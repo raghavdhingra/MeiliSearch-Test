@@ -8,6 +8,8 @@
 npm start
 ```
 
+###### The MeiliSearch server will be initialised at host: 127.0.0.1 on port 7700 (http://127.0.0.1:7700). A folder will be created on the base route with name "meili_database", this will be the default database directory from where the API will fetch the data, Thanks to MeiliSearch in-built API server. Alongwith, an API key will be set to access the MeiliSearch API. Check package.json for API key.
+
 2. Import the json data from data-API to meiliSearch server in order to create a local instance of indexed-database entries. For this, start a new terminal without killing the previous one, and enter:
 
 ```
